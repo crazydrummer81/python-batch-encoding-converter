@@ -6,9 +6,9 @@ from shutil import copyfile
 source_folder = 'D:\\Temp\\0000-dinect\\20211111\\unconverted'
 target_folder = 'D:\\Temp\\0000-dinect\\20211111\\utf-8'
 target_encoding = 'utf-8'
-target_encoding_str = 'utf-8'
+target_encoding_str = 'utf-8' # Need for check with OS
 # target_encoding = 'cp1251'
-# target_encoding_str = 'windows-1251'
+# target_encoding_str = 'windows-1251' # Need for check with OS
 
 files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(source_folder) for f in filenames]
 
