@@ -29,7 +29,7 @@ for source_filename in files:
 
 	print("%d) %s: %s" % (count, encoding, source_filename))
 
-	if (not encoding is None) and (encoding.lower() != target_encoding_str):
+	if (not encoding is None) and (encoding.lower() != target_encoding_str.lower()):
 
 		f = codecs.open(source_filename, 'r', encoding)
 		u = f.read()   # now the contents have been transformed to a Unicode string
@@ -42,7 +42,7 @@ for source_filename in files:
 		nones.append(source_filename)
 		copyfile(source_filename, output_filename)
 
-	elif encoding.lower() == target_encoding:
+	elif encoding.lower() == target_encoding.lower():
 		
 		allready_in_target_encoding.append(source_filename)
 		copyfile(source_filename, output_filename)
